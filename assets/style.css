@@ -1678,6 +1678,247 @@ select:focus-visible {
     }
 }
 
+body.document-page {
+    color-scheme: dark;
+    --font-family-base: 'M PLUS 1', 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+    --bg: #191919;
+    --surface: #242424;
+    --surface-subtle: #202020;
+    --surface-hover: #2a2a2a;
+    --text: #d8d8d4;
+    --text-muted: #9b9a97;
+    --heading: #f1f1ef;
+    --accent: #4f9cf9;
+    --accent-soft: rgba(79, 156, 249, 0.14);
+    --border-soft: rgba(255, 255, 255, 0.09);
+    --border-strong: rgba(255, 255, 255, 0.14);
+    --code-bg: #1f1f1f;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-family-base);
+    line-height: 1.65;
+}
+
+body.document-page::before {
+    display: none;
+}
+
+body.document-page ::selection {
+    background: rgba(79, 156, 249, 0.22);
+}
+
+body.document-page a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(79, 156, 249, 0.48);
+    text-underline-offset: 0.18em;
+}
+
+body.document-page a:hover {
+    text-decoration-color: var(--accent);
+}
+
+body.document-page p,
+body.document-page ul,
+body.document-page ol,
+body.document-page li {
+    font-size: 0.96rem;
+}
+
+body.document-page ul,
+body.document-page ol {
+    padding-left: 1.2rem;
+}
+
+body.document-page li {
+    margin-bottom: 0.5rem;
+}
+
+body.document-page code {
+    padding: 0.14em 0.42em;
+    border: 1px solid var(--border-soft);
+    border-radius: 6px;
+    background: var(--code-bg);
+    color: var(--heading);
+    font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.88em;
+}
+
+body.document-page h1,
+body.document-page h2,
+body.document-page h3 {
+    color: var(--heading);
+}
+
+body.document-page h1 {
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    line-height: 1.04;
+    letter-spacing: -0.05em;
+    font-weight: 800;
+}
+
+body.document-page h2 {
+    font-size: 1rem;
+    line-height: 1.28;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+}
+
+body.document-page h3 {
+    font-size: 0.98rem;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+body.document-page .container {
+    width: min(920px, calc(100% - 56px));
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 32px 0 40px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 24px;
+    row-gap: 0;
+}
+
+body.document-page .container > h1,
+body.document-page .container > .app-name,
+body.document-page .container > p:not(.app-name):not(.last-updated) {
+    grid-column: 1;
+}
+
+body.document-page .container > h1 {
+    padding-top: 8px;
+}
+
+body.document-page .container > .app-name {
+    margin-top: 12px;
+    color: var(--heading);
+    font-size: 0.82rem;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+body.document-page .container > p:not(.app-name) {
+    margin-top: 6px;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+}
+
+body.document-page .container > .last-updated {
+    grid-column: 1;
+    margin-bottom: 0;
+}
+
+body.document-page .container > .document-language-switcher {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    width: min(100%, 18rem);
+    min-width: 188px;
+    align-self: start;
+    justify-self: end;
+    margin-top: 10px;
+}
+
+body.document-page .container > section,
+body.document-page .container > footer {
+    grid-column: 1 / -1;
+}
+
+body.document-page .container > section:first-of-type {
+    margin-top: 18px;
+    border-top: 1px solid var(--border-soft);
+}
+
+body.document-page section {
+    display: grid;
+    gap: 12px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+body.document-page h3 {
+    margin-top: 4px;
+}
+
+body.document-page .document-language-switcher {
+    position: relative;
+}
+
+body.document-page .document-language-switcher .language-select {
+    width: 100%;
+}
+
+body.document-page .document-language-switcher:hover .language-switcher__icon {
+    color: #475569;
+}
+
+body.document-page .contact-info {
+    display: inline-block;
+    padding: 14px 16px;
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    background: var(--surface-subtle);
+    color: var(--heading);
+    line-height: 1.85;
+}
+
+body.document-page footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 20px;
+    margin-top: 20px;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+}
+
+body.document-page footer p {
+    margin: 0;
+}
+
+body.document-page footer a {
+    text-decoration: none;
+}
+
+body.document-page footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 860px) {
+    body.document-page .container {
+        width: min(100%, calc(100% - 28px));
+        padding: 22px 0 28px;
+        grid-template-columns: 1fr;
+    }
+
+    body.document-page h1 {
+        font-size: clamp(1.9rem, 10vw, 2.6rem);
+    }
+
+    body.document-page .container > .document-language-switcher {
+        grid-column: 1;
+        grid-row: auto;
+        width: 100%;
+        min-width: 0;
+        justify-self: stretch;
+        margin-top: 14px;
+    }
+
+    body.document-page .container > section:first-of-type {
+        margin-top: 20px;
+    }
+
+    body.document-page footer {
+        display: grid;
+        gap: 6px;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;

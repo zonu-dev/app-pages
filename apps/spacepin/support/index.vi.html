@@ -17,17 +17,21 @@
         <p>Nền tảng: macOS</p>
         <p class="last-updated">Cập nhật lần cuối: 22 tháng 3, 2026</p>
 
-        <section class="language-switcher">
-            <h2>Language / 言語</h2>
-            <ul>
-                <li><a href="index.html">English</a></li>
-                <li><a href="index.ja.html">日本語</a></li>
-                <li><a href="index.ko.html">한국어</a></li>
-                <li><a href="index.zh-Hans.html">简体中文</a></li>
-                <li><a href="index.vi.html" aria-current="page">Tiếng Việt</a></li>
-                <li><a href="index.id.html">Bahasa Indonesia</a></li>
-            </ul>
-        </section>
+        <div class="document-language-switcher">
+            <select id="language-select" class="language-select toy-btn" aria-label="Ngôn ngữ" onchange="window.location.href=this.value">
+                <option value="index.html">English</option>
+                <option value="index.ja.html">日本語</option>
+                <option value="index.ko.html">한국어</option>
+                <option value="index.zh-Hans.html">简体中文</option>
+                <option value="index.vi.html" selected>Tiếng Việt</option>
+                <option value="index.id.html">Bahasa Indonesia</option>
+            </select>
+            <div class="language-switcher__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                </svg>
+            </div>
+        </div>
 
         <section>
             <h2>1. Tổng quan</h2>
