@@ -4,90 +4,146 @@
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#191919">
+    <meta name="theme-color" content="#F4F7F9">
     <title>SpacePin - Support</title>
     <link rel="stylesheet" href="../../../assets/style.css">
 </head>
-<body class="document-page">
-    <div class="container">
-        <h1>Support</h1>
-        <p class="app-name">SpacePin</p>
-        <p>Platform: macOS</p>
-        <p class="last-updated">Last updated: March 22, 2026</p>
+<body class="document-page theme-spacepin page-support">
+    <div class="container document-layout">
+        <div class="document-toolbar">
+            <a class="back-link" href="../../../index.en.html">Back to top</a>
+            <div class="document-language-switcher">
+                <select id="language-select" class="language-select toy-btn" aria-label="Language" onchange="window.location.href=this.value">
+                    <option value="index.html" selected>English</option>
+                    <option value="index.ja.html">日本語</option>
+                    <option value="index.ko.html">한국어</option>
+                    <option value="index.zh-Hans.html">简体中文</option>
+                    <option value="index.vi.html">Tiếng Việt</option>
+                    <option value="index.id.html">Bahasa Indonesia</option>
+                </select>
+                <div class="language-switcher__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
 
-        <section class="language-switcher">
-            <h2>Language / 言語</h2>
-            <ul>
-                <li><a href="index.html" aria-current="page">English</a></li>
-                <li><a href="index.ja.html">日本語</a></li>
-                <li><a href="index.ko.html">한국어</a></li>
-                <li><a href="index.zh-Hans.html">简体中文</a></li>
-                <li><a href="index.vi.html">Tiếng Việt</a></li>
-                <li><a href="index.id.html">Bahasa Indonesia</a></li>
-            </ul>
-        </section>
+        <header class="document-header">
+            <h1>Support</h1>
+            <div class="meta-pills">
+                <span class="meta-pill meta-pill--brand">SPACEPIN</span>
+                <span class="meta-pill">Platform: macOS</span>
+                <span class="meta-pill">Last updated: March 22, 2026</span>
+            </div>
+        </header>
 
-        <section>
-            <h2>1. Overview</h2>
-            <p>SpacePin is a menu bar app for macOS that shows notes and images in small pinned windows.</p>
-        </section>
+        <main class="document-shell">
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">1</span>
+                        <h2>Overview</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>SpacePin is a menu bar app for macOS that shows notes and images in small pinned windows.</p>
+                    </div>
+                </section>
 
-        <section>
-            <h2>2. Basic Usage</h2>
-            <ul>
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">2</span>
+                        <h2>Basic Usage</h2>
+                    </div>
+                    <div class="doc-section__body">
+<ul>
                 <li>Open SpacePin from the menu bar.</li>
                 <li>Select New Note Pin to add a note.</li>
                 <li>Select Import Image... to add an image pin.</li>
                 <li>Select Open Manager to review and change detailed settings.</li>
             </ul>
-        </section>
+                    </div>
+                </section>
 
-        <section>
-            <h2>3. Main Features</h2>
-            <ul>
-                <li>Multiple pins</li>
-                <li>Move and resize</li>
-                <li>Lock</li>
-                <li>Click-through</li>
-                <li>Opacity adjustment</li>
-                <li>Note color selection</li>
-                <li>Font size adjustment</li>
-                <li>Restore pins after restarting the app</li>
-            </ul>
-        </section>
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">3</span>
+                        <h2>Main Features</h2>
+                    </div>
+                    <div class="doc-section__body">
+                    <ul class="feature-tags">
+                        <li>Multiple pins</li>
+                        <li>Move and resize</li>
+                        <li>Lock</li>
+                        <li>Click-through</li>
+                        <li>Opacity adjustment</li>
+                        <li>Note color selection</li>
+                        <li>Font size adjustment</li>
+                        <li>Restore pins after restarting the app</li>
+                    </ul>
+                    </div>
+                </section>
 
-        <section>
-            <h2>4. FAQ</h2>
+                <section class="doc-section doc-section--faq">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">4</span>
+                        <h2>FAQ</h2>
+                    </div>
+                    <div class="doc-section__body">
+                    <div class="qa-list">
+                        <article class="qa-card">
+                            <h3><span class="qa-badge">Q</span><span>Why does the app not appear in the Dock?</span></h3>
+                            <div class="qa-answer">
+                                <span class="qa-badge">A</span>
+                                <p>This is expected behavior. SpacePin is designed as a menu bar app.</p>
+                            </div>
+                        </article>
+                        <article class="qa-card">
+                            <h3><span class="qa-badge">Q</span><span>Will pins always stay visible on full-screen Spaces?</span></h3>
+                            <div class="qa-answer">
+                                <span class="qa-badge">A</span>
+                                <p>Not completely. Because of macOS behavior and restrictions, display on full-screen Spaces cannot be fully guaranteed in every case.</p>
+                            </div>
+                        </article>
+                        <article class="qa-card">
+                            <h3><span class="qa-badge">Q</span><span>What should I do if I turned on click-through and cannot click a pin?</span></h3>
+                            <div class="qa-answer">
+                                <span class="qa-badge">A</span>
+                                <p>Open the Manager or use the menu bar item to turn click-through off.</p>
+                            </div>
+                        </article>
+                    </div>
+                    </div>
+                </section>
 
-            <h3>Why does the app not appear in the Dock?</h3>
-            <p>This is expected behavior. SpacePin is designed as a menu bar app.</p>
-
-            <h3>Will pins always stay visible on full-screen Spaces?</h3>
-            <p>Not completely. Because of macOS behavior and restrictions, display on full-screen Spaces cannot be fully guaranteed in every case.</p>
-
-            <h3>What should I do if I turned on click-through and cannot click a pin?</h3>
-            <p>Open the Manager or use the menu bar item to turn click-through off.</p>
-        </section>
-
-        <section>
-            <h2>5. Contact</h2>
-            <p>If you need help with SpacePin, please contact us:</p>
+                <section class="doc-section doc-section--contact">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">5</span>
+                        <h2>Contact</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>If you need help with SpacePin, please contact us:</p>
             <p class="contact-info">
                 Operator: ZOOCHI<br>
                 Email: contact@zoochigames.com
             </p>
-        </section>
+                    </div>
+                </section>
 
-        <section>
-            <h2>6. Privacy Policy</h2>
-            <p><a href="../privacy/">View the SpacePin Privacy Policy</a></p>
-        </section>
+                <section class="doc-section doc-section--cta">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">6</span>
+                        <h2>Privacy Policy</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p><a href="../privacy/">View the SpacePin Privacy Policy</a></p>
+                    </div>
+                </section>
+        </main>
 
-        <footer>
-            <p><a href="../../../index.en.html">← Back to top</a></p>
-            <p>&copy; 2026 All rights reserved.</p>
+        <footer class="doc-footer">
+            <div class="doc-footer__copyright">&copy; 2026 ZOOCHI All rights reserved.</div>
         </footer>
     </div>
 </body>

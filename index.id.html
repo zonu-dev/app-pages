@@ -4,63 +4,211 @@
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&amp;display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#191919">
+    <meta name="theme-color" content="#F4F7F9">
     <meta name="description" content="Informasi dukungan, pengumuman, kebijakan, dan informasi terkait lainnya untuk aplikasi ZOOCHI.">
     <title>Aplikasi ZOOCHI</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<body class="home-page">
+<body class="home-page theme-home">
     <div class="container">
         <header class="page-header">
-            <h1>Aplikasi ZOOCHI</h1>
-            <nav class="language-switcher" aria-label="Bahasa">
-                <ul>
-                    <li><a href="index.en.html">English</a></li>
-                    <li><a href="index.html">日本語</a></li>
-                    <li><a href="index.ko.html">한국어</a></li>
-                    <li><a href="index.zh-Hans.html">简体中文</a></li>
-                    <li><a href="index.vi.html">Tiếng Việt</a></li>
-                    <li><a href="index.id.html" aria-current="page">Bahasa Indonesia</a></li>
-                </ul>
-            </nav>
+            <h1 class="hero-title">
+                <span class="hero-title__brand">ZOOCHI</span>
+            </h1>
+            <div class="language-switcher">
+                <select id="language-select" class="language-select toy-btn" aria-label="Bahasa" onchange="window.location.href=this.value">
+                    <option value="index.en.html">English</option>
+                    <option value="index.html">日本語</option>
+                    <option value="index.ko.html">한국어</option>
+                    <option value="index.zh-Hans.html">简体中文</option>
+                    <option value="index.vi.html">Tiếng Việt</option>
+                    <option value="index.id.html" selected>Bahasa Indonesia</option>
+                </select>
+                <div class="language-switcher__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                </div>
+            </div>
         </header>
 
-        <section class="apps">
+        <main class="app-overview">
             <div class="section-heading">
-                <h2>Daftar aplikasi</h2>
-                <p>Pilih halaman yang diperlukan</p>
+                <h2><span class="section-heading__marker" aria-hidden="true"></span>PRODUCTS</h2>
             </div>
-            <div class="app-grid">
-                <article class="app-card">
-                    <h3>Rooted English</h3>
-                    <p>Aplikasi belajar bahasa Inggris</p>
-                    <ul class="document-list">
-                        <li><a href="apps/rooted-english/privacy/index.id.html">Kebijakan Privasi</a></li>
-                    </ul>
-                </article>
 
-                <article class="app-card">
-                    <h3>SpacePin</h3>
-                    <p>Aplikasi menu bar untuk macOS</p>
-                    <ul class="document-list">
-                        <li><a href="apps/spacepin/privacy/index.id.html">Kebijakan Privasi</a></li>
-                        <li><a href="apps/spacepin/support/index.id.html">Dukungan</a></li>
-                    </ul>
-                </article>
+            <div class="home-columns">
+                <div class="home-column">
+                    <article class="app-card app-card--rooted solid-shadow">
+                        <div class="app-card__hero">
+                            <div class="wobble-container app-card__wobble app-card__wobble--positive">
+                                <div class="wobble-target app-badge app-badge--rooted">R</div>
+                            </div>
+                            <div class="app-card__copy">
+                                <h3>Rooted English</h3>
+                                <p>Aplikasi belajar bahasa Inggris</p>
+                            </div>
+                        </div>
+                        <div class="app-card__actions">
+                            <div class="status-panel">
+                                <div class="status-panel__main">
+                                    <span class="status-panel__label">App Store</span>
+                                    <span class="status-panel__badge">Sedang dikembangkan</span>
+                                </div>
+                                <span class="status-panel__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <a href="apps/rooted-english/privacy/index.id.html" class="toy-btn action-button action-button--rooted">
+                                <span class="action-button__label">Kebijakan Privasi</span>
+                                <span class="action-button__icon action-button__icon--tilt-left" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="app-card app-card--auto solid-shadow">
+                        <div class="app-card__hero">
+                            <div class="wobble-container app-card__wobble app-card__wobble--positive">
+                                <div class="wobble-target app-badge app-badge--auto">A</div>
+                            </div>
+                            <div class="app-card__copy">
+                                <h3>Auto Image Layout</h3>
+                                <p>Alat web untuk menggabungkan beberapa gambar menjadi satu<br>dan menyimpannya</p>
+                            </div>
+                        </div>
+                        <div class="app-card__actions">
+                            <a href="https://zonu-dev.github.io/auto-image-layout/" target="_blank" rel="noopener noreferrer" class="toy-btn action-button action-button--auto">
+                                <span class="action-button__label">Gunakan</span>
+                                <span class="action-button__icon action-button__icon--tilt-right" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 0 1 0 1.971l-11.54 6.347c-.75.412-1.667-.13-1.667-.986V5.653z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="home-column">
+                    <article class="app-card app-card--spacepin solid-shadow">
+                        <div class="app-card__hero">
+                            <div class="wobble-container app-card__wobble app-card__wobble--negative">
+                                <div class="wobble-target app-badge app-badge--spacepin">S</div>
+                            </div>
+                            <div class="app-card__copy">
+                                <h3>SpacePin</h3>
+                                <p>Aplikasi menu bar<br>untuk macOS</p>
+                            </div>
+                        </div>
+                        <div class="app-card__actions">
+                            <div class="status-panel">
+                                <div class="status-panel__main">
+                                    <span class="status-panel__label">App Store</span>
+                                    <span class="status-panel__badge">Sedang ditinjau</span>
+                                </div>
+                                <span class="status-panel__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <a href="https://github.com/zonu-dev/spacepin/releases/download/v1.0.0/SpacePin.dmg" target="_blank" rel="noopener noreferrer" class="toy-btn action-button action-button--spacepin">
+                                <span class="action-button__label">Unduh</span>
+                                <span class="action-button__icon action-button__icon--tilt-left-strong" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="apps/spacepin/privacy/index.id.html" class="toy-btn action-button action-button--spacepin">
+                                <span class="action-button__label">Kebijakan Privasi</span>
+                                <span class="action-button__icon action-button__icon--tilt-right-strong" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="apps/spacepin/support/index.id.html" class="toy-btn action-button action-button--spacepin">
+                                <span class="action-button__label">Dukungan</span>
+                                <span class="action-button__icon action-button__icon--tilt-left" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="app-card app-card--palette solid-shadow">
+                        <div class="app-card__hero">
+                            <div class="wobble-container app-card__wobble app-card__wobble--negative">
+                                <div class="wobble-target app-badge app-badge--palette">P</div>
+                            </div>
+                            <div class="app-card__copy">
+                                <h3>Palette Pixelizer</h3>
+                                <p>Alat web untuk mengubah gambar menjadi pixel art<br>dan menyimpannya</p>
+                            </div>
+                        </div>
+                        <div class="app-card__actions">
+                            <a href="https://zonu-dev.github.io/palette-pixelizer/" target="_blank" rel="noopener noreferrer" class="toy-btn action-button action-button--palette">
+                                <span class="action-button__label">Gunakan</span>
+                                <span class="action-button__icon action-button__icon--tilt-left" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 0 1 0 1.971l-11.54 6.347c-.75.412-1.667-.13-1.667-.986V5.653z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
             </div>
-        </section>
+        </main>
 
-        <section class="contact">
-            <div class="section-heading">
-                <h2>Kontak</h2>
+        <footer class="site-footer">
+            <div class="contact-panel footer-card solid-shadow">
+                <div class="contact-panel__orb" aria-hidden="true"></div>
+                <h2 class="contact-panel__heading">
+                    <span class="wobble-container" aria-hidden="true">
+                        <span class="wobble-target contact-panel__heading-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="currentColor" fill-rule="evenodd" d="M12 2.25c-2.429 0-4.817.178-7.152.521C2.87 3.061 1.5 4.795 1.5 6.741v6.018c0 1.946 1.37 3.68 3.348 3.97.877.129 1.761.234 2.652.316V21a.75.75 0 0 0 1.28.53l4.184-4.183a.39.39 0 0 1 .266-.112c2.006-.05 3.982-.22 5.922-.506 1.978-.29 3.348-2.023 3.348-3.97V6.741c0-1.947-1.37-3.68-3.348-3.97A49.145 49.145 0 0 0 12 2.25ZM8.25 8.625a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Zm2.625 1.125a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Zm4.875-1.125a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Z" clip-rule="evenodd"></path>
+                            </svg>
+                        </span>
+                    </span>
+                    Kontak
+                </h2>
+                <p>Untuk pertanyaan tentang setiap produk, hubungi kami melalui email di bawah atau lewat Marshmallow.</p>
+                <div class="contact-links">
+                    <a href="mailto:contact@zoochigames.com" class="toy-btn btn-wobble-group contact-link contact-link--email">
+                        <span class="wobble-target contact-link__icon contact-link__icon--email" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67z"></path>
+                                <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908z"></path>
+                            </svg>
+                        </span>
+                        <span class="contact-link__copy">
+                            <span class="contact-link__title">Hubungi lewat email</span>
+                            <span class="contact-link__text">contact@zoochigames.com</span>
+                        </span>
+                    </a>
+                    <a href="https://marshmallow-qa.com/4q8wumfpc9uj4w6?t=WQvBkW&amp;utm_medium=url_text&amp;utm_source=promotion" target="_blank" rel="noopener noreferrer" class="toy-btn btn-wobble-group contact-link contact-link--marshmallow">
+                        <span class="wobble-target contact-link__icon contact-link__icon--marshmallow" aria-hidden="true">M</span>
+                        <span class="contact-link__copy">
+                            <span class="contact-link__title">Tanya di Marshmallow</span>
+                            <span class="contact-link__text">Bisa bertanya secara anonim</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="site-footer__copyright">&copy; 2026 ZOOCHI All rights reserved.</div>
             </div>
-            <p>Silakan lihat informasi kontak di bagian bawah masing-masing halaman aplikasi.</p>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 All rights reserved.</p>
         </footer>
     </div>
 </body>
