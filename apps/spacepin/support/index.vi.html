@@ -8,21 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#F4F7F9">
     <title>SpacePin - Hỗ trợ</title>
-    <link rel="stylesheet" href="../../../assets/style.css">
+    <link rel="stylesheet" href="../../../assets/style.css?v=38">
 </head>
 <body class="document-page theme-spacepin page-support">
     <div class="container document-layout">
         <div class="document-toolbar">
 <div class="document-toolbar__controls">
-                <a class="back-link" href="../../../index.vi.html"><span class="back-link__text">Quay lại trang chủ</span></a>
+                <a class="document-home-link" href="../../../index.vi.html" aria-label="Quay lại trang chủ"><img src="../../../assets/zoochi-logo.png?v=2" alt="ZOOCHI" class="brand-logo"></a>
                             <div class="document-language-switcher">
+                <img id="language-flag" class="language-switcher__flag" src="../../../assets/flags/vn.svg" alt="" aria-hidden="true">
                 <select id="language-select" class="language-select toy-btn" aria-label="Ngôn ngữ" onchange="window.location.href=this.value">
-                    <option value="index.html">English</option>
-                    <option value="index.ja.html">日本語</option>
-                    <option value="index.ko.html">한국어</option>
-                    <option value="index.zh-Hans.html">简体中文</option>
-                    <option value="index.vi.html" selected>Tiếng Việt</option>
-                    <option value="index.id.html">Bahasa Indonesia</option>
+                    <option value="index.html" data-flag="us">EN</option>
+                    <option value="index.ja.html" data-flag="jp">JA</option>
+                    <option value="index.ko.html" data-flag="kr">KO</option>
+                    <option value="index.zh-Hans.html" data-flag="cn">ZH</option>
+                    <option value="index.vi.html" selected data-flag="vn">VI</option>
+                    <option value="index.id.html" data-flag="id">ID</option>
                 </select>
                 <div class="language-switcher__icon" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
@@ -43,11 +44,11 @@
 
         <header class="document-header">
             <div class="document-header__identity">
-                <div class="wobble-container app-card__wobble app-card__wobble--negative"><img class="wobble-target app-badge app-badge--spacepin" src="../../../assets/spacepin-icon.png" alt="Space Pin"></div>
+                <div class="wobble-container app-card__wobble app-card__wobble--negative"><div class="wobble-target app-badge app-badge--spacepin"><img src="../../../assets/spacepin-icon.png" alt="Space Pin" class="app-badge__icon"></div></div>
                 <h1>Hỗ trợ</h1>
             </div>
             <div class="meta-pills">
-                <span class="meta-pill">Cập nhật lần cuối: 22 tháng 3, 2026</span>
+                <span class="meta-pill">22 tháng 3, 2026</span>
             </div>
         </header>
 
@@ -148,21 +149,38 @@
                         <h2>Chính sách quyền riêng tư</h2>
                     </div>
                     <div class="doc-section__body">
-<p><a href="../privacy/index.vi.html">Xem Chính sách quyền riêng tư của SpacePin</a></p>
+<a href="../privacy/index.vi.html" class="toy-btn action-button action-button--spacepin">
+                                <span class="action-button__label">Xem Chính sách quyền riêng tư của SpacePin</span>
+                                <span class="action-button__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </span>
+                            </a>
                     </div>
                 </section>
         </main>
 
         <footer class="doc-footer">
+            <div class="doc-footer__actions">
+                <a class="back-link doc-footer__back-link" href="../../../index.vi.html" aria-label="Quay lại trang chủ"><span class="back-link__text">Quay lại trang chủ</span></a>
+            </div>
             <div class="doc-footer__copyright">&copy; 2026 ZOOCHI All rights reserved.</div>
         </footer>
     </div>
     <script>
     (function(){
-        if(location.search.indexOf('view=mobile')!==-1){
+        var isMobile=location.search.indexOf('view=mobile')!==-1;
+        if(isMobile){
             document.body.classList.add('mobile-preview');
             var b=document.getElementById('view-toggle');
             if(b)b.querySelector('.view-toggle__label').textContent='PC';
+            document.querySelectorAll('a[href]').forEach(function(a){
+                var h=a.getAttribute('href');
+                if(h && !h.startsWith('http') && !h.startsWith('mailto:') && h.indexOf('view=mobile')===-1){
+                    a.setAttribute('href',h+(h.indexOf('?')!==-1?'&':'?')+'view=mobile');
+                }
+            });
         }
         var s=document.getElementById('language-select');
         if(s){
@@ -170,12 +188,22 @@
             s.addEventListener('change',function(){
                 var url=this.value;
                 if(document.body.classList.contains('mobile-preview')){
-                    url+=(url.indexOf("?")!==-1?"&":"?")+"view=mobile";
+                    url+=(url.indexOf('?')!==-1?'&':'?')+'view=mobile';
                 }
                 window.location.href=url;
             });
         }
+        var flagImg=document.getElementById('language-flag');
+        if(s&&flagImg){
+            var flagBase=flagImg.src.replace(/[^/]+$/,'');
+            s.addEventListener('change',function(){
+                var opt=this.options[this.selectedIndex];
+                var f=opt.getAttribute('data-flag');
+                if(f)flagImg.src=flagBase+f+'.svg';
+            });
+        }
     })();
     </script>
+    <script src="../../../assets/language-switcher-state.js?v=9"></script>
 </body>
 </html>

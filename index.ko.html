@@ -9,23 +9,24 @@
     <meta name="theme-color" content="#F4F7F9">
     <meta name="description" content="ZOOCHI 앱의 지원, 공지, 정책 및 기타 관련 정보를 제공합니다.">
     <title>ZOOCHI 앱</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/style.css?v=38">
 </head>
 <body class="home-page theme-home">
     <div class="container">
         <header class="page-header">
             <h1 class="hero-title">
-                <span class="hero-title__brand">ZOOCHI</span>
+                <a class="hero-title__brand document-home-link" href="index.ko.html" aria-label="상단으로 돌아가기"><img src="assets/zoochi-logo.png?v=2" alt="ZOOCHI" class="brand-logo"></a>
             </h1>
                         <div class="page-header__controls">
                 <div class="language-switcher">
+                <img id="language-flag" class="language-switcher__flag" src="assets/flags/kr.svg" alt="" aria-hidden="true">
                 <select id="language-select" class="language-select toy-btn" aria-label="언어" onchange="window.location.href=this.value">
-                    <option value="index.en.html">English</option>
-                    <option value="index.html">日本語</option>
-                    <option value="index.ko.html" selected>한국어</option>
-                    <option value="index.zh-Hans.html">简体中文</option>
-                    <option value="index.vi.html">Tiếng Việt</option>
-                    <option value="index.id.html">Bahasa Indonesia</option>
+                    <option value="index.en.html" data-flag="us">EN</option>
+                    <option value="index.html" data-flag="jp">JA</option>
+                    <option value="index.ko.html" selected data-flag="kr">KO</option>
+                    <option value="index.zh-Hans.html" data-flag="cn">ZH</option>
+                    <option value="index.vi.html" data-flag="vn">VI</option>
+                    <option value="index.id.html" data-flag="id">ID</option>
                 </select>
                 <div class="language-switcher__icon" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
@@ -46,7 +47,7 @@
 
         <main class="app-overview">
             <div class="section-heading">
-                <h2><span class="section-heading__marker" aria-hidden="true"></span>PRODUCTS</h2>
+                <h2><span class="section-heading__marker" aria-hidden="true"></span>만든 것들</h2>
             </div>
 
             <div class="home-columns">
@@ -54,7 +55,7 @@
                     <article class="app-card app-card--auto solid-shadow">
                         <div class="app-card__hero">
                             <div class="wobble-container app-card__wobble app-card__wobble--positive">
-                                <div class="wobble-target app-badge app-badge--auto">A</div>
+                                <div class="wobble-target app-badge app-badge--auto"><img src="assets/auto-image-layout-icon.png" alt="Auto Image Layout" class="app-badge__icon"></div>
                             </div>
                             <div class="app-card__copy">
                                 <h3>Auto Image Layout</h3>
@@ -65,11 +66,11 @@
                             </div>
                         </div>
                         <div class="app-card__actions">
-                            <a href="https://zonu-dev.github.io/auto-image-layout/" target="_blank" rel="noopener noreferrer" class="toy-btn action-button action-button--auto">
+                            <a href="https://zonu-dev.github.io/auto-image-layout/" class="toy-btn action-button action-button--auto">
                                 <span class="action-button__label">사용하기</span>
-                                <span class="action-button__icon action-button__icon--tilt-right" aria-hidden="true">
+                                <span class="action-button__icon" aria-hidden="true">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 0 1 0 1.971l-11.54 6.347c-.75.412-1.667-.13-1.667-.986V5.653z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path>
                                     </svg>
                                 </span>
                             </a>
@@ -79,7 +80,7 @@
                     <article class="app-card app-card--palette solid-shadow">
                         <div class="app-card__hero">
                             <div class="wobble-container app-card__wobble app-card__wobble--negative">
-                                <div class="wobble-target app-badge app-badge--palette">P</div>
+                                <div class="wobble-target app-badge app-badge--palette"><img src="assets/palette-pixelizer-icon.png" alt="Palette Pixelizer" class="app-badge__icon"></div>
                             </div>
                             <div class="app-card__copy">
                                 <h3>Palette Pixelizer</h3>
@@ -90,11 +91,11 @@
                             </div>
                         </div>
                         <div class="app-card__actions">
-                            <a href="https://zonu-dev.github.io/palette-pixelizer/" target="_blank" rel="noopener noreferrer" class="toy-btn action-button action-button--palette">
+                            <a href="https://zonu-dev.github.io/palette-pixelizer/" class="toy-btn action-button action-button--palette">
                                 <span class="action-button__label">사용하기</span>
-                                <span class="action-button__icon action-button__icon--tilt-left" aria-hidden="true">
+                                <span class="action-button__icon" aria-hidden="true">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 0 1 0 1.971l-11.54 6.347c-.75.412-1.667-.13-1.667-.986V5.653z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path>
                                     </svg>
                                 </span>
                             </a>
@@ -106,7 +107,7 @@
                     <article class="app-card app-card--spacepin solid-shadow">
                         <div class="app-card__hero">
                             <div class="wobble-container app-card__wobble app-card__wobble--negative">
-                                <img class="wobble-target app-badge app-badge--spacepin" src="assets/spacepin-icon.png" alt="Space Pin">
+                                <div class="wobble-target app-badge app-badge--spacepin"><img src="assets/spacepin-icon.png" alt="Space Pin" class="app-badge__icon"></div>
                             </div>
                             <div class="app-card__copy">
                                 <h3>Space Pin</h3>
@@ -117,30 +118,27 @@
                             </div>
                         </div>
                         <div class="app-card__actions">
-                            <div class="status-panel">
-                                <div class="status-panel__main">
-                                    <span class="status-panel__label">App Store</span>
-                                    <span class="status-panel__badge">심사 중</span>
-                                </div>
-                                <span class="status-panel__icon" aria-hidden="true">
+                            <a href="https://apps.apple.com/jp/app/spacepin/id6760965570" target="_blank" rel="noopener noreferrer" class="toy-btn action-button action-button--spacepin">
+                                <span class="action-button__label">App Store</span>
+                                <span class="action-button__icon" aria-hidden="true">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
                                     </svg>
                                 </span>
-                            </div>
+                            </a>
                             <a href="apps/spacepin/privacy/index.ko.html" class="toy-btn action-button action-button--spacepin">
                                 <span class="action-button__label">개인정보 처리방침</span>
-                                <span class="action-button__icon action-button__icon--tilt-right-strong" aria-hidden="true">
+                                <span class="action-button__icon" aria-hidden="true">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path>
                                     </svg>
                                 </span>
                             </a>
                             <a href="apps/spacepin/support/index.ko.html" class="toy-btn action-button action-button--spacepin">
                                 <span class="action-button__label">지원</span>
-                                <span class="action-button__icon action-button__icon--tilt-left" aria-hidden="true">
+                                <span class="action-button__icon" aria-hidden="true">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path>
                                     </svg>
                                 </span>
                             </a>
@@ -150,7 +148,7 @@
                     <article class="app-card app-card--rooted solid-shadow">
                         <div class="app-card__hero">
                             <div class="wobble-container app-card__wobble app-card__wobble--positive">
-                                <div class="wobble-target app-badge app-badge--rooted">R</div>
+                                <div class="wobble-target app-badge app-badge--rooted"><img src="assets/etymo-icon.png" alt="Rooted English" class="app-badge__icon"></div>
                             </div>
                             <div class="app-card__copy">
                                 <h3>Rooted English</h3>
@@ -186,9 +184,9 @@
                             </div>
                             <a href="apps/rooted-english/privacy/index.ko.html" class="toy-btn action-button action-button--rooted">
                                 <span class="action-button__label">개인정보 처리방침</span>
-                                <span class="action-button__icon action-button__icon--tilt-left" aria-hidden="true">
+                                <span class="action-button__icon" aria-hidden="true">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path>
                                     </svg>
                                 </span>
                             </a>
@@ -212,7 +210,7 @@
                     </span>
                     문의
                 </h2>
-                <p>각 제품에 관한 문의는 아래 이메일 또는 Marshmallow를 통해 보내실 수 있습니다.</p>
+                <p>버그 제보나 요청 사항 등, 편하게 연락해 주세요</p>
                 <div class="contact-links">
                     <a href="mailto:contact@zoochigames.com" class="toy-btn btn-wobble-group contact-link contact-link--email">
                         <span class="wobble-target contact-link__icon contact-link__icon--email" aria-hidden="true">
@@ -236,30 +234,74 @@
                         </span>
                     </a>
                 </div>
-                <div class="site-footer__copyright">&copy; 2026 ZOOCHI All rights reserved.</div>
             </div>
+                <div class="site-footer__copyright">&copy; 2026 ZOOCHI All rights reserved.</div>
         </footer>
     </div>
     <script>
     (function(){
-        if(location.search.indexOf('view=mobile')!==-1){
+        var isMobile=location.search.indexOf('view=mobile')!==-1;
+        if(isMobile){
             document.body.classList.add('mobile-preview');
             var b=document.getElementById('view-toggle');
             if(b)b.querySelector('.view-toggle__label').textContent='PC';
+            document.querySelectorAll('a[href]').forEach(function(a){
+                var h=a.getAttribute('href');
+                if(h && !h.startsWith('http') && !h.startsWith('mailto:') && h.indexOf('view=mobile')===-1){
+                    a.setAttribute('href',h+(h.indexOf('?')!==-1?'&':'?')+'view=mobile');
+                }
+            });
         }
         var s=document.getElementById('language-select');
         if(s){
-            var orig=s.onchange;
             s.setAttribute('onchange','');
             s.addEventListener('change',function(){
                 var url=this.value;
                 if(document.body.classList.contains('mobile-preview')){
-                    url+=(url.indexOf("?")!==-1?"&":"?")+"view=mobile";
+                    url+=(url.indexOf('?')!==-1?'&':'?')+'view=mobile';
                 }
                 window.location.href=url;
             });
         }
+        var flagImg=document.getElementById('language-flag');
+        if(s&&flagImg){
+            var flagBase=flagImg.src.replace(/[^/]+$/,'');
+            s.addEventListener('change',function(){
+                var opt=this.options[this.selectedIndex];
+                var f=opt.getAttribute('data-flag');
+                if(f)flagImg.src=flagBase+f+'.svg';
+            });
+        }
+
+        function resizeSelect(sel){
+            var styles=getComputedStyle(sel);
+            var tmp=document.createElement('span');
+            var horizontalPadding=parseFloat(styles.paddingLeft)+parseFloat(styles.paddingRight);
+            var borderWidth=parseFloat(styles.borderLeftWidth)+parseFloat(styles.borderRightWidth);
+            tmp.style.cssText='visibility:hidden;position:absolute;left:-9999px;top:-9999px;white-space:pre;';
+            tmp.style.font=styles.font;
+            tmp.style.letterSpacing=styles.letterSpacing;
+            tmp.style.textTransform=styles.textTransform;
+            tmp.textContent=sel.options[sel.selectedIndex].text;
+            document.body.appendChild(tmp);
+            sel.style.width=Math.ceil(tmp.getBoundingClientRect().width+horizontalPadding+borderWidth+2)+'px';
+            tmp.remove();
+        }
+        var sel=document.getElementById('language-select');
+        if(sel){
+            var syncSelectWidth=function(){
+                window.requestAnimationFrame(function(){resizeSelect(sel);});
+            };
+            syncSelectWidth();
+            window.addEventListener('load',syncSelectWidth);
+            window.addEventListener('pageshow',syncSelectWidth);
+            window.addEventListener('resize',syncSelectWidth);
+            if(document.fonts && document.fonts.ready){
+                document.fonts.ready.then(syncSelectWidth);
+            }
+        }
     })();
     </script>
+    <script src="assets/language-switcher-state.js?v=9"></script>
 </body>
 </html>

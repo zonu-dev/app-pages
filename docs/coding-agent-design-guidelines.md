@@ -149,17 +149,22 @@
 
 - `select` ベースで実装する
 - 見た目はピル型、右端に小さなシェブロンアイコンを重ねる
-- モバイルでは横幅いっぱい、デスクトップでは `188px` を目安に固定
+- select の左に丸型の国旗アイコンを表示する。アイコンは [circle-flags](https://github.com/HatScripts/circle-flags)（MIT）の SVG を `assets/flags/` に配置して使う
+- option のテキストは言語コード（EN, JA, KO, ZH, VI, ID）のみ。言語名は表示しない
+- 言語切替時に JS で国旗画像の `src` を切り替える（`data-flag` 属性を参照）
+- 表示幅は国旗と選択中ラベルに合わせて JS で自動調整する
 - すべての公開ページで、同じ言語セットを同じ順序で並べる
 
 対象ロケール:
 
-- `en`
-- `ja`
-- `ko`
-- `zh-Hans`
-- `vi`
-- `id`
+| コード | 国旗ファイル |
+|--------|-------------|
+| `en` | `us.svg` |
+| `ja` | `jp.svg` |
+| `ko` | `kr.svg` |
+| `zh-Hans` | `cn.svg` |
+| `vi` | `vn.svg` |
+| `id` | `id.svg` |
 
 ### 2. ヒーロー見出し
 
@@ -173,25 +178,18 @@
 - 上部ヒーロー面: `surface-soft` を使った内側カード
 - 左にバッジ、右に製品名と短い説明
 - 下部に `status-panel` と `action-button` を縦積みする
+- バッジは文字 1 文字（R, A, P）またはアプリアイコン画像（`<img class="app-badge">` + `padding` で調整）
+- アプリアイコン画像を使う場合、背景グラデーションはそのまま維持し `object-fit: contain` で収める
+- カードの並び順はモバイル 1 カラム時の表示順で決める（現在: Auto → Palette → SpacePin → Rooted）
 
 構造例:
 
 ```html
-<article class="app-card app-card--spacepin solid-shadow">
-  <div class="app-card__hero">
-    <div class="wobble-container app-card__wobble app-card__wobble--negative">
-      <div class="wobble-target app-badge app-badge--spacepin">S</div>
-    </div>
-    <div class="app-card__copy">
-      <h3>SpacePin</h3>
-      <p>macOS向けメニューバーアプリ</p>
-    </div>
-  </div>
-  <div class="app-card__actions">
-    <div class="status-panel">...</div>
-    <a class="toy-btn action-button action-button--spacepin" href="...">...</a>
-  </div>
-</article>
+<!-- 文字バッジ -->
+<div class="wobble-target app-badge app-badge--rooted">R</div>
+
+<!-- 画像バッジ -->
+<img class="wobble-target app-badge app-badge--spacepin" src="assets/spacepin-icon.png" alt="Space Pin">
 ```
 
 ### 4. ステータスパネル
@@ -205,8 +203,9 @@
 
 - 通常時は白地
 - ホバー時に製品色へ面ごと切り替え、ラベルを白へ反転する
-- 右アイコンは丸背景を持たせ、ホバー時に軽く傾ける
+- 右アイコンは統一して右矢印（`→`）の SVG を使う。個別のアイコン（再生、ダウンロード等）は使わない
 - クリック感のある `toy-btn` を付与する
+- 影は `0 4px 0 #cbd5e1` で統一。ホバー `translateY(-1px)` + `0 5px 0`、押下 `translateY(4px)` + 影消し
 
 ### 6. フッターの問い合わせ面
 
@@ -215,13 +214,14 @@
 - 右上に薄い円形オーブを置いて単調さを避ける
 - 問い合わせリンクは白カード 2 枚程度を並べる
 - それぞれに色つきアイコンボックスを持たせる
+- 権利表記（copyright）は問い合わせカードの外、`site-footer` 直下に右揃えで置く。罫線は付けない
 
 ### 7. 文書ヘッダー
 
-- `h1` の下に `meta-pills`
-- 先頭ピルはブランド名で、テーマ色グラデーション
-- 続くピルは `Last updated` や `Platform` などの補助情報
-- 補助情報は多くても 2 から 3 個まで
+- CSS Grid で構成。アイコンが左列（2 行分）、タイトルと更新日が右列に縦並び
+- ブランドバッジ（SPACEPIN 等）は使わない。アプリアイコンバッジで製品を識別する
+- 更新日はラベル（「最終更新日:」等）を省略し、日付のみ小さく表示する（`font-size: 0.78rem`、ボーダーなし、背景なし）
+- タイトルは `1.75rem`、アイコンの視覚中心と揃える
 
 ### 8. 文書セクション
 
@@ -229,6 +229,8 @@
 - 本文は番号行から少し下げて開始する
 - 箇条書きは淡い面にまとめ、通常のブラウザ既定の箇条書きを使わない
 - 先頭マーカーは小さな丸とソフトシャドウで表現する
+- セクション間の区切り線は `2px dashed rgba(148, 163, 184, 0.36)` の破線を使う
+- 機能一覧は `feature-tags` ではなく通常の箇条書き（`<ul>`）で統一する
 
 構造例:
 
@@ -259,7 +261,21 @@
 
 - 文書下部で関連文書へ誘導するときに使う
 - 単独リンクを本文中に裸で置かず、`doc-section doc-section--cta` として 1 セクション扱いにする
-- リンクは下線付きテキストで十分。大きすぎるボタンにしない
+- リンクはトップページと同じ `action-button` スタイル（白地、右矢印、ホバーでテーマ色反転）を使う
+
+### 11. ツールバー（文書ページ上部）
+
+- トップページへ戻るロゴリンク、言語セレクト、表示切替ボタンを 1 行に横並びする
+- 左端は ZOOCHI ロゴ画像を使ったトップページリンクにする
+- 3 要素の影・ホバー・押下アニメーションは `toy-btn` と同じ値で統一する（`0 4px 0 #cbd5e1`）
+- ロゴリンクは左寄せ、言語セレクトと表示切替は右寄せ
+
+### 12. PC/Mobile 表示切替
+
+- デスクトップブラウザに表示切替ボタンを設ける（タッチデバイスでは非表示: `@media (hover: none) and (pointer: coarse)`）
+- Mobile モード時はコンテナ幅を `375px` に制限し、1 カラムレイアウトにする
+- `?view=mobile` パラメータで状態を保持し、ページ遷移・言語切替時に引き継ぐ
+- Mobile モード時は全内部リンクに `?view=mobile` を自動付与する
 
 ## 動きのルール
 
@@ -269,6 +285,7 @@
 - バッジやアイコンの軽い `bob`
 - ホバー時の `icon-wobble`
 - ボタン押下時の `translateY(4px)`
+- クリック時の `scale(0.85) + rotate`（wobble-container 内の要素）
 
 ### アニメーションの原則
 
@@ -278,6 +295,13 @@
 - ループする動きは 1 箇所か 2 箇所まで
 - `prefers-reduced-motion: reduce` を必ず尊重する
 
+### wobble のスコープ
+
+- `wobble-container:hover` は直接ホバーした要素だけを揺らす
+- `app-card:hover` はカード全体のホバーでバッジを揺らす
+- フッター（`footer-card`）では、セクション全体のホバーで見出しアイコン（`.contact-panel__heading-icon`）だけを揺らし、子ボタンのアイコンは各ボタン（`.btn-wobble-group`）のホバーで個別に揺らす
+- クリック（`:active`）時の回転角度は CSS 変数 `--wobble-rotate` で制御し、JS の `mousedown` イベントで毎回 -15deg〜+15deg のランダム値を設定する
+
 ## コピーと情報設計
 
 - 見出しは短く、説明責務を明確にする
@@ -285,6 +309,9 @@
 - サポート文書は「何ができるか」「どう使うか」「困ったらどうするか」の順で整理する
 - ポリシー文書は法務文体に寄せすぎず、平易な説明を保つ
 - 公開ページ上で、リポジトリ名、実装都合、内部フロー、開発メモを出さない
+- セクション見出しは日本語に統一する（「PRODUCTS」ではなく「つくったもの」）。英語と日本語を混在させない
+- ボタンラベルもひらがなの柔らかいトーンに揃える（「使う」ではなく「つかってみる」）
+- 更新日のラベル（「最終更新日:」等）は省略し、日付のみ表示する
 
 ## 実装スタイル
 
@@ -292,6 +319,7 @@
 - ページ単位の見た目差分を増やしすぎない
 - まず意味的な HTML を組み、その後クラスで見た目を付ける
 - SVG アイコンはシンプルな線画または単色面で揃える
+- 矢印やナビゲーション系アイコンは CSS `mask-image` + インライン SVG data URI で実装し、テキスト文字（`←` `→` `›`）は使わない
 - フォーカスリングは削除しない
 - `target="_blank"` を使う外部リンクには `rel="noopener noreferrer"` を付ける
 
