@@ -1,0 +1,8 @@
+[submodule "apps-src/palette-pixelizer"]
+	path = apps-src/palette-pixelizer
+	url = https://github.com/zonu-dev/palette-pixelizer.git
+	branch = main
+[submodule "apps-src/auto-image-layout"]
+	path = apps-src/auto-image-layout
+	url = https://github.com/zonu-dev/auto-image-layout.git
+	branch = main
