@@ -165,7 +165,7 @@ rotated = img.rotate(10, expand=True, resample=Image.BICUBIC, fillcolor=(0, 0, 0
 
 | アプリ | テーマ色 | バッジ背景 | アクセント |
 |---|---|---|---|
-| Rooted English | `#34d399` → `#059669` | 緑グラデーション | 緑 |
+| Etymo | `#34d399` → `#059669` | 緑グラデーション | 緑 |
 | Space Pin | `#6366f1` → `#4f46e5` | 紫青グラデーション | 赤（ピン） |
 | Auto Image Layout | `#fb923c` → `#ea580c` | オレンジグラデーション | 黄 `#FDE047`（鎖・エフェクト） |
 | Palette Pixelizer | `#a855f7` → `#9333ea` | 紫グラデーション | 未定 |

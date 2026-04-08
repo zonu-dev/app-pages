@@ -4,7 +4,7 @@ Project-specific rules:
 
 - This repo hosts user-facing static pages for ZOOCHI apps.
 - Keep copy and navigation user-facing. Do not surface repository or developer workflow details in public pages.
-- Public pages should stay aligned to the current locale set used by Rooted English: `en`, `ja`, `ko`, `zh-Hans`, `vi`, `id`.
+- Public pages should stay aligned to the current locale set used by Etymo: `en`, `ja`, `ko`, `zh-Hans`, `vi`, `id`.
 - When adding or changing a public page, update all locale variants together unless the task explicitly says otherwise.
 - Keep language switchers, top-page links, and footer back-links consistent across locales.
 - Preserve legacy `apps/*.html` redirect pages when changing public paths.
