@@ -247,12 +247,16 @@ ol {
         --enter-delay: 0.38s;
     }
 
-    .home-page .contact-panel {
+    .home-columns > .home-column:first-child > .app-card:nth-child(3) {
         --enter-delay: 0.44s;
     }
 
-    .home-page .site-footer__copyright {
+    .home-page .contact-panel {
         --enter-delay: 0.5s;
+    }
+
+    .home-page .site-footer__copyright {
+        --enter-delay: 0.56s;
     }
 
     .document-toolbar {
@@ -1694,6 +1698,10 @@ body.home-page {
     border-color: var(--purple);
 }
 
+.app-card--champions:hover {
+    border-color: #3ba8ff;
+}
+
 .home-page .app-card__hero {
     display: flex;
     align-items: center;
@@ -1800,6 +1808,14 @@ body.home-page {
 
 .app-badge--palette {
     background: linear-gradient(135deg, var(--purple), #9333ea);
+}
+
+.app-badge--champions {
+    background: linear-gradient(135deg, #ff8c4d, #3ba8ff);
+}
+
+.app-badge--champions .app-badge__icon {
+    padding: 6px;
 }
 
 .home-page .app-card__copy h3 {
@@ -2007,6 +2023,16 @@ body.home-page {
 .action-button--palette:hover .action-button__icon {
     background: #ffffff;
     color: var(--purple);
+}
+
+.action-button--champions:hover {
+    border-color: #3ba8ff;
+    background: #3ba8ff;
+}
+
+.action-button--champions:hover .action-button__icon {
+    background: #ffffff;
+    color: #3ba8ff;
 }
 
 .home-page .site-footer {
