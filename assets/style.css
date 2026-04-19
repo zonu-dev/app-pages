@@ -32,6 +32,14 @@
     --blue-soft-border: #c7d2fe;
     --orange: #fb923c;
     --orange-deep: #ea580c;
+    --salmon: #f07e5a;
+    --salmon-deep: #d16340;
+    --salmon-soft: #fdeee9;
+    --salmon-soft-border: #f8c6b3;
+    --stealth-blue: #3b6270;
+    --stealth-blue-deep: #233744;
+    --stealth-blue-soft: #e3ecf1;
+    --stealth-blue-soft-border: #9eb5c0;
     --purple: #a855f7;
     --purple-deep: #9333ea;
     --marshmallow-pink: #ff80a1;
@@ -127,6 +135,14 @@ ol {
     --theme-soft: var(--blue-soft);
     --theme-soft-border: var(--blue-soft-border);
     --theme-ink: var(--blue-deep);
+}
+
+.theme-stealth {
+    --theme-accent: var(--stealth-blue);
+    --theme-accent-deep: var(--stealth-blue-deep);
+    --theme-soft: var(--stealth-blue-soft);
+    --theme-soft-border: var(--stealth-blue-soft-border);
+    --theme-ink: var(--stealth-blue-deep);
 }
 
 .theme-home {
@@ -251,12 +267,16 @@ ol {
         --enter-delay: 0.44s;
     }
 
-    .home-page .contact-panel {
+    .home-columns > .home-column:first-child > .app-card:nth-child(4) {
         --enter-delay: 0.5s;
     }
 
-    .home-page .site-footer__copyright {
+    .home-page .contact-panel {
         --enter-delay: 0.56s;
+    }
+
+    .home-page .site-footer__copyright {
+        --enter-delay: 0.62s;
     }
 
     .document-toolbar {
@@ -1702,6 +1722,10 @@ body.home-page {
     border-color: #3ba8ff;
 }
 
+.app-card--stealth:hover {
+    border-color: var(--stealth-blue);
+}
+
 .home-page .app-card__hero {
     display: flex;
     align-items: center;
@@ -1816,6 +1840,14 @@ body.home-page {
 
 .app-badge--champions .app-badge__icon {
     padding: 6px;
+}
+
+.app-badge--stealth {
+    background: linear-gradient(135deg, var(--stealth-blue), var(--stealth-blue-deep));
+}
+
+.app-badge--stealth .app-badge__icon {
+    padding: 4px;
 }
 
 .home-page .app-card__copy h3 {
@@ -2033,6 +2065,16 @@ body.home-page {
 .action-button--champions:hover .action-button__icon {
     background: #ffffff;
     color: #3ba8ff;
+}
+
+.action-button--stealth:hover {
+    border-color: var(--stealth-blue);
+    background: var(--stealth-blue);
+}
+
+.action-button--stealth:hover .action-button__icon {
+    background: #ffffff;
+    color: var(--stealth-blue);
 }
 
 .home-page .site-footer {

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F4F7F9">
+    <title>Stealth X - プライバシーポリシー</title>
+    <link rel="stylesheet" href="../../../assets/style.css?v=38">
+    <script defer src="../../../assets/site-analytics.js?v=1"></script>
+</head>
+<body class="document-page theme-stealth page-privacy">
+    <div class="container document-layout">
+        <div class="document-toolbar">
+<div class="document-toolbar__controls">
+                <a class="document-home-link" href="../../../index.html" aria-label="トップに戻る"><img src="../../../assets/zoochi-logo.png?v=2" alt="ZOOCHI" class="brand-logo"></a>
+                            <div class="document-language-switcher">
+                <img id="language-flag" class="language-switcher__flag" src="../../../assets/flags/jp.svg" alt="" aria-hidden="true">
+                <select id="language-select" class="language-select toy-btn" aria-label="言語" onchange="window.location.href=this.value">
+                    <option value="index.html" data-flag="us">EN</option>
+                    <option value="index.ja.html" selected data-flag="jp">JA</option>
+                    <option value="index.ko.html" data-flag="kr">KO</option>
+                    <option value="index.zh-Hans.html" data-flag="cn">ZH</option>
+                    <option value="index.vi.html" data-flag="vn">VI</option>
+                    <option value="index.id.html" data-flag="id">ID</option>
+                </select>
+                <div class="language-switcher__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                </div>
+            </div>
+                            <button class="view-toggle" id="view-toggle" onclick="document.body.classList.toggle('mobile-preview');var m=document.body.classList.contains('mobile-preview');this.querySelector('.view-toggle__label').textContent=m?'PC':'Mobile';history.replaceState(null,'',m?location.pathname+'?view=mobile':location.pathname)">
+                <span class="view-toggle__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"></path>
+                    </svg>
+                </span>
+                <span class="view-toggle__label">Mobile</span>
+            </button>
+            </div>
+        </div>
+
+        <header class="document-header">
+            <div class="document-header__identity">
+                <div class="wobble-container app-card__wobble app-card__wobble--negative"><div class="wobble-target app-badge app-badge--stealth"><img src="../../../assets/stealth-x-icon.png?v=3" alt="Stealth X" class="app-badge__icon"></div></div>
+                <h1>プライバシーポリシー</h1>
+            </div>
+            <div class="meta-pills">
+                <span class="meta-pill">2026年04月20日</span>
+            </div>
+        </header>
+
+        <main class="document-shell">
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">1</span>
+                        <h2>はじめに</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>本拡張機能「Stealth X」（以下「本拡張機能」）は、ユーザーのプライバシーを尊重し、情報の保護に努めます。本プライバシーポリシーは、本拡張機能がどのような情報を取り扱い、どのように利用するかを説明するものです。</p>
+                    </div>
+                </section>
+
+                <section class="doc-section doc-section--has-note">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">2</span>
+                        <h2>収集・保存する情報</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>本拡張機能は、X（x.com / twitter.com）上でユーザー自身のアカウントを特定できる UI 要素をローカルで非表示にする Chrome 拡張機能です。アカウント登録は不要であり、個人情報、解析データ、広告識別子、閲覧履歴、位置情報を収集しません。</p>
+            <p>本拡張機能は、Chrome の <code>storage.sync</code> に以下の設定値のみをローカル保存します：</p>
+            <ul>
+                <li>マスクのマスター オン/オフ状態</li>
+                <li>各項目のオン/オフ（表示名、@ユーザー名、アイコン、ヘッダ画像、プロフィール bio、位置情報、登録日、投稿数、フォロー/フォロワー数）</li>
+            </ul>
+            <p>保存される値は真偽値のトグルのみです。個人を特定できる情報、ツイート内容、認証トークン、Cookie は一切保存しません。Chrome 同期を有効にしている場合、これらの真偽値がご自身のデバイス間で Google アカウント経由で同期されることがありますが、これは Chrome プラットフォームの機能であり、本拡張機能が送信を行うものではありません。</p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">3</span>
+                        <h2>情報の利用目的</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>ローカルに保存された設定は、以下の目的でのみ利用されます：</p>
+            <ul>
+                <li>お使いのデバイス上で X の UI にマスクを適用するため</li>
+                <li>ページ再読み込みやブラウザ再起動後も設定を保持するため</li>
+            </ul>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">4</span>
+                        <h2>外部サービスの利用</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>本拡張機能は、広告 SDK、解析 SDK、第三者トラッカーを利用しません。</p>
+            <p>本拡張機能は、ページ内容、ツイート、アカウント情報、利用状況を当社サーバーや第三者サーバーへアップロードしません。すべてのマスク処理はブラウザ内でローカルに完結します。</p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">5</span>
+                        <h2>第三者への提供</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>法令に基づく場合を除き、ユーザーの情報や設定を第三者へ提供しません。</p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">6</span>
+                        <h2>データの保存期間・削除</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>本拡張機能が保存する設定は、Chrome のローカルストレージに保存されます。ポップアップからリセット操作を行うか、拡張機能のデータを消去するか、拡張機能をアンインストールするまで保持されます。</p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">7</span>
+                        <h2>セキュリティ</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>本拡張機能は、設定の真偽値のみをローカルに保存します。バックエンドサーバーは運用していないため、通常の利用において設定や閲覧活動が当社へ送信されることはありません。</p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">8</span>
+                        <h2>子供のプライバシー</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>本拡張機能は、13歳未満の子供から意図的に個人情報を収集することはありません。</p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">9</span>
+                        <h2>プライバシーポリシーの変更</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>本拡張機能は、必要に応じて本プライバシーポリシーを変更することがあります。変更後のプライバシーポリシーは、本ページに掲載した時点で効力を生じるものとします。</p>
+                    </div>
+                </section>
+
+                <section class="doc-section doc-section--contact">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">10</span>
+                        <h2>お問い合わせ</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>お問い合わせをいただいた場合、そのメールに含まれる情報を受け取ることがあります。本プライバシーポリシーに関するご質問やご意見がございましたら、以下までご連絡ください：</p>
+            <p class="contact-info">
+                運営者: ZOOCHI<br>
+                メール: contact@zoochigames.com
+            </p>
+                    </div>
+                </section>
+        </main>
+
+        <footer class="doc-footer">
+            <div class="doc-footer__actions">
+                <a class="back-link doc-footer__back-link" href="../../../index.html" aria-label="トップに戻る"><span class="back-link__text">トップに戻る</span></a>
+            </div>
+            <div class="doc-footer__copyright">&copy; 2026 ZOOCHI All rights reserved.</div>
+        </footer>
+    </div>
+    <script>
+    (function(){
+        var isMobile=location.search.indexOf('view=mobile')!==-1;
+        if(isMobile){
+            document.body.classList.add('mobile-preview');
+            var b=document.getElementById('view-toggle');
+            if(b)b.querySelector('.view-toggle__label').textContent='PC';
+            document.querySelectorAll('a[href]').forEach(function(a){
+                var h=a.getAttribute('href');
+                if(h && !h.startsWith('http') && !h.startsWith('mailto:') && h.indexOf('view=mobile')===-1){
+                    a.setAttribute('href',h+(h.indexOf('?')!==-1?'&':'?')+'view=mobile');
+                }
+            });
+        }
+        var s=document.getElementById('language-select');
+        if(s){
+            s.setAttribute('onchange','');
+            s.addEventListener('change',function(){
+                var url=this.value;
+                if(document.body.classList.contains('mobile-preview')){
+                    url+=(url.indexOf('?')!==-1?'&':'?')+'view=mobile';
+                }
+                window.location.href=url;
+            });
+        }
+        var flagImg=document.getElementById('language-flag');
+        if(s&&flagImg){
+            var flagBase=flagImg.src.replace(/[^/]+$/,'');
+            s.addEventListener('change',function(){
+                var opt=this.options[this.selectedIndex];
+                var f=opt.getAttribute('data-flag');
+                if(f)flagImg.src=flagBase+f+'.svg';
+            });
+        }
+    })();
+    </script>
+    <script src="../../../assets/language-switcher-state.js?v=9"></script>
+</body>
+</html>

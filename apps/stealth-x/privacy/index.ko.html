@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F4F7F9">
+    <title>Stealth X - 개인정보처리방침</title>
+    <link rel="stylesheet" href="../../../assets/style.css?v=38">
+    <script defer src="../../../assets/site-analytics.js?v=1"></script>
+</head>
+<body class="document-page theme-stealth page-privacy">
+    <div class="container document-layout">
+        <div class="document-toolbar">
+<div class="document-toolbar__controls">
+                <a class="document-home-link" href="../../../index.ko.html" aria-label="상단으로 돌아가기"><img src="../../../assets/zoochi-logo.png?v=2" alt="ZOOCHI" class="brand-logo"></a>
+                            <div class="document-language-switcher">
+                <img id="language-flag" class="language-switcher__flag" src="../../../assets/flags/kr.svg" alt="" aria-hidden="true">
+                <select id="language-select" class="language-select toy-btn" aria-label="언어" onchange="window.location.href=this.value">
+                    <option value="index.html" data-flag="us">EN</option>
+                    <option value="index.ja.html" data-flag="jp">JA</option>
+                    <option value="index.ko.html" selected data-flag="kr">KO</option>
+                    <option value="index.zh-Hans.html" data-flag="cn">ZH</option>
+                    <option value="index.vi.html" data-flag="vn">VI</option>
+                    <option value="index.id.html" data-flag="id">ID</option>
+                </select>
+                <div class="language-switcher__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                </div>
+            </div>
+                            <button class="view-toggle" id="view-toggle" onclick="document.body.classList.toggle('mobile-preview');var m=document.body.classList.contains('mobile-preview');this.querySelector('.view-toggle__label').textContent=m?'PC':'Mobile';history.replaceState(null,'',m?location.pathname+'?view=mobile':location.pathname)">
+                <span class="view-toggle__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"></path>
+                    </svg>
+                </span>
+                <span class="view-toggle__label">Mobile</span>
+            </button>
+            </div>
+        </div>
+
+        <header class="document-header">
+            <div class="document-header__identity">
+                <div class="wobble-container app-card__wobble app-card__wobble--negative"><div class="wobble-target app-badge app-badge--stealth"><img src="../../../assets/stealth-x-icon.png?v=3" alt="Stealth X" class="app-badge__icon"></div></div>
+                <h1>개인정보처리방침</h1>
+            </div>
+            <div class="meta-pills">
+                <span class="meta-pill">2026년 4월 20일</span>
+            </div>
+        </header>
+
+        <main class="document-shell">
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">1</span>
+                        <h2>소개</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>본 확장 프로그램 "Stealth X"(이하 "본 확장")은 이용자의 개인정보를 존중하며 정보 보호에 최선을 다합니다. 본 개인정보처리방침은 본 확장이 어떤 정보를 처리하고 어떻게 사용하는지 설명합니다.</p>
+                    </div>
+                </section>
+
+                <section class="doc-section doc-section--has-note">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">2</span>
+                        <h2>수집 및 저장되는 정보</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>본 확장은 X(x.com / twitter.com) 페이지에서 사용자 자신의 계정을 식별할 수 있는 UI 요소를 로컬로 가리는 Chrome 확장 프로그램입니다. 계정 등록이 필요 없으며, 개인정보, 분석 데이터, 광고 식별자, 열람 기록, 위치 정보를 수집하지 않습니다.</p>
+            <p>본 확장은 Chrome의 <code>storage.sync</code>에 다음 설정값만 로컬로 저장합니다:</p>
+            <ul>
+                <li>마스킹의 마스터 켜기/끄기 상태</li>
+                <li>항목별 토글(표시 이름, @사용자 이름, 아이콘, 헤더 이미지, 프로필 소개, 위치, 가입일, 게시물 수, 팔로우/팔로워 수)</li>
+            </ul>
+            <p>저장되는 값은 불리언 토글뿐입니다. 개인 식별 정보, 트윗 내용, 인증 토큰, 쿠키는 일절 저장하지 않습니다. Chrome 동기화가 활성화되어 있으면 이 불리언 값이 Google 계정을 통해 사용자의 기기 간에 동기화될 수 있으나, 이는 Chrome 플랫폼 기능이며 본 확장이 수행하는 전송이 아닙니다.</p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">3</span>
+                        <h2>정보 이용 목적</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>로컬에 저장된 설정은 다음 목적에만 사용됩니다:</p>
+            <ul>
+                <li>사용자의 기기에서 X UI에 마스킹을 적용하기 위해</li>
+                <li>페이지 재로드 및 브라우저 재시작 후에도 설정을 유지하기 위해</li>
+            </ul>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">4</span>
+                        <h2>외부 서비스 이용</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>본 확장은 광고 SDK, 분석 SDK, 제3자 추적기를 사용하지 않습니다.</p>
+            <p>본 확장은 페이지 내용, 트윗, 계정 정보, 이용 데이터를 당사 서버 또는 제3자 서버로 업로드하지 않습니다. 모든 마스킹 처리는 브라우저 내에서 로컬로 완결됩니다.</p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">5</span>
+                        <h2>제3자 제공</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>법률에 의해 요구되는 경우를 제외하고 사용자의 정보나 설정을 제3자에게 제공하지 않습니다.</p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">6</span>
+                        <h2>보관 기간 및 삭제</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>본 확장이 저장하는 설정은 Chrome의 로컬 저장소에 보관됩니다. 팝업에서 초기화하거나 확장 데이터를 지우거나 확장을 제거할 때까지 유지됩니다.</p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">7</span>
+                        <h2>보안</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>본 확장은 설정 불리언 값만 로컬에 저장합니다. 이 데이터를 위한 백엔드 서버를 운영하지 않으므로 일반적인 사용 과정에서 설정이나 열람 활동이 당사로 전송되지 않습니다.</p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">8</span>
+                        <h2>아동의 개인정보</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>본 확장은 만 13세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">9</span>
+                        <h2>개인정보처리방침 변경</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>본 개인정보처리방침은 필요에 따라 변경될 수 있습니다. 변경된 내용은 이 페이지에 게시된 시점부터 효력이 발생합니다.</p>
+                    </div>
+                </section>
+
+                <section class="doc-section doc-section--contact">
+                    <div class="doc-section__heading">
+                        <span class="doc-section__number">10</span>
+                        <h2>문의</h2>
+                    </div>
+                    <div class="doc-section__body">
+<p>문의하실 경우 이메일에 포함된 정보를 받게 될 수 있습니다. 본 개인정보처리방침에 대한 질문이나 우려 사항이 있으면 아래로 연락해 주세요:</p>
+            <p class="contact-info">
+                운영자: ZOOCHI<br>
+                이메일: contact@zoochigames.com
+            </p>
+                    </div>
+                </section>
+        </main>
+
+        <footer class="doc-footer">
+            <div class="doc-footer__actions">
+                <a class="back-link doc-footer__back-link" href="../../../index.ko.html" aria-label="상단으로 돌아가기"><span class="back-link__text">상단으로 돌아가기</span></a>
+            </div>
+            <div class="doc-footer__copyright">&copy; 2026 ZOOCHI All rights reserved.</div>
+        </footer>
+    </div>
+    <script>
+    (function(){
+        var isMobile=location.search.indexOf('view=mobile')!==-1;
+        if(isMobile){
+            document.body.classList.add('mobile-preview');
+            var b=document.getElementById('view-toggle');
+            if(b)b.querySelector('.view-toggle__label').textContent='PC';
+            document.querySelectorAll('a[href]').forEach(function(a){
+                var h=a.getAttribute('href');
+                if(h && !h.startsWith('http') && !h.startsWith('mailto:') && h.indexOf('view=mobile')===-1){
+                    a.setAttribute('href',h+(h.indexOf('?')!==-1?'&':'?')+'view=mobile');
+                }
+            });
+        }
+        var s=document.getElementById('language-select');
+        if(s){
+            s.setAttribute('onchange','');
+            s.addEventListener('change',function(){
+                var url=this.value;
+                if(document.body.classList.contains('mobile-preview')){
+                    url+=(url.indexOf('?')!==-1?'&':'?')+'view=mobile';
+                }
+                window.location.href=url;
+            });
+        }
+        var flagImg=document.getElementById('language-flag');
+        if(s&&flagImg){
+            var flagBase=flagImg.src.replace(/[^/]+$/,'');
+            s.addEventListener('change',function(){
+                var opt=this.options[this.selectedIndex];
+                var f=opt.getAttribute('data-flag');
+                if(f)flagImg.src=flagBase+f+'.svg';
+            });
+        }
+    })();
+    </script>
+    <script src="../../../assets/language-switcher-state.js?v=9"></script>
+</body>
+</html>
