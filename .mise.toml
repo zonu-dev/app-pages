@@ -1,0 +1,15 @@
+[tasks.build]
+description = "Build local preview"
+alias = ["b"]
+run = "./scripts/build-pages.sh"
+
+[tasks.serve]
+description = "Build and serve local preview"
+alias = ["s"]
+depends = ["build"]
+run = "python3 -m http.server 4173 --directory .pages-dist"
+
+[tasks.open]
+description = "Open local preview"
+alias = ["o"]
+run = "open http://localhost:4173"
