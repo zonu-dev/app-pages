@@ -1,0 +1,25 @@
+name: Version Guard
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  check-submodule-version-bumps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: bash scripts/check-submodule-version-bumps.sh
+        env:
+          VERSION_GUARD_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+          VERSION_GUARD_HEAD: ${{ github.sha }}

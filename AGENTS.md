@@ -17,6 +17,8 @@
 - `apps-src/*` のツール UI を変更するときは、表示文言を `src/i18n.ts` の全ロケールで揃える。
 - `apps-src/*` のツールはフロントエンド専用に保つ。バックエンド、認証、DB は明示要求がない限り追加しない。
 - `apps-src/*` の公開配信は `npm run build:app-pages` の `/apps/<app-name>/` base path を前提にする。asset、canonical、OG、Twitter card、structured data、robots、sitemap の公開 URL を同じ subpath に揃える。
+- `apps-src/*` のユーザー向け変更を `main` に入れるときは、先に対象アプリ側で version を上げて push し、その commit を submodule pointer として取り込む。submodule pointer 更新前後の app version は `scripts/check-submodule-version-bumps.sh` で確認する。
+- ルート静的ページだけの変更には package version がない。versioned app の UI/挙動に影響する変更は、静的ページ側だけで済ませず対象アプリの version bump も行う。
 - ルートの GitHub Pages 用成果物は `scripts/build-pages.sh` が `.pages-dist` に生成する。`.pages-dist` と各アプリの `dist` は生成物として扱い、直接編集しない。
 - 個別アプリを変更したら、そのアプリのディレクトリで `npm run lint`、`npm run test`、`npm run build` を可能な範囲で実行する。配信形まで確認する場合はルートで `./scripts/build-pages.sh` を実行する。
 - ルート静的ページだけの確認は `python3 -m http.server 4173` で行う。配信成果物を確認するときは `python3 -m http.server 4173 --directory .pages-dist` を使う。
