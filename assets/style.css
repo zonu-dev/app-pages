@@ -14,6 +14,7 @@
     --surface-soft: #f8fafc;
     --surface-dark: #1e293b;
     --text: #1e293b;
+    --text-strong: #0f172a;
     --muted: #64748b;
     --line: #cbd5e1;
     --line-strong: #cbd5e1;
@@ -40,10 +41,11 @@
     --stealth-blue-deep: #233744;
     --stealth-blue-soft: #e3ecf1;
     --stealth-blue-soft-border: #9eb5c0;
-    --purple: #a855f7;
-    --purple-deep: #9333ea;
+    --purple: #8b5cf6;
+    --purple-deep: #7c3aed;
     --marshmallow-pink: #ff80a1;
     --amber: #fbbf24;
+    --danger: #dc2626;
     --home-current: #38bdf8;
     --doc-current: #1e293b;
     --theme-accent: var(--cyan);
@@ -1687,7 +1689,7 @@ body.home-page {
     padding: 12px;
     background: #ffffff;
     border: 3px solid var(--line);
-    border-radius: 2rem;
+    border-radius: 2.5rem;
     overflow: hidden;
     transition:
         transform 0.2s ease,
@@ -1697,7 +1699,7 @@ body.home-page {
 }
 
 .home-page .app-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     box-shadow: 0 6px 0 var(--shadow);
     background-color: #ffffff;
 }
@@ -1732,7 +1734,7 @@ body.home-page {
     gap: 16px;
     padding: 16px;
     margin-bottom: 2px;
-    background: #ffffff;
+    background: var(--surface-soft);
     border-radius: 1.5rem;
 }
 
@@ -1831,7 +1833,7 @@ body.home-page {
 }
 
 .app-badge--palette {
-    background: linear-gradient(135deg, var(--purple), #9333ea);
+    background: linear-gradient(135deg, var(--purple), var(--purple-deep));
 }
 
 .app-badge--champions {
@@ -2022,6 +2024,10 @@ body.home-page {
     background: var(--green);
 }
 
+.action-button--rooted:hover .action-button__label {
+    color: var(--text-strong);
+}
+
 .action-button--rooted:hover .action-button__icon {
     background: #ffffff;
     color: var(--green);
@@ -2040,6 +2046,10 @@ body.home-page {
 .action-button--auto:hover {
     border-color: var(--orange);
     background: var(--orange);
+}
+
+.action-button--auto:hover .action-button__label {
+    color: var(--text-strong);
 }
 
 .action-button--auto:hover .action-button__icon {
@@ -2088,7 +2098,7 @@ body.home-page {
 }
 
 .footer-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     box-shadow: 0 6px 0 var(--shadow);
 }
 
