@@ -22,3 +22,4 @@
 - ルートの GitHub Pages 用成果物は `scripts/build-pages.sh` が `.pages-dist` に生成する。`.pages-dist` と各アプリの `dist` は生成物として扱い、直接編集しない。
 - 個別アプリを変更したら、そのアプリのディレクトリで `npm run lint`、`npm run test`、`npm run build` を可能な範囲で実行する。配信形まで確認する場合はルートで `./scripts/build-pages.sh` を実行する。
 - ルート静的ページだけの確認は `python3 -m http.server 4173` で行う。配信成果物を確認するときは `python3 -m http.server 4173 --directory .pages-dist` を使う。
+- Codex App で実行されているセッションで UI、レイアウト、CSS、インタラクションを変更した場合は、上記のローカルサーバーを起動し、Codex App 内蔵ブラウザ（Browser Use）で動作確認やスクリーンショット撮影を行う。外部ブラウザや macOS `open` だけで確認を済ませない。
