@@ -41,6 +41,11 @@
     --stealth-blue-deep: #233744;
     --stealth-blue-soft: #e3ecf1;
     --stealth-blue-soft-border: #9eb5c0;
+    --timeline-teal: #00708a;
+    --timeline-teal-deep: #101828;
+    --timeline-teal-soft: #e0f7fb;
+    --timeline-teal-soft-border: #93d9e8;
+    --timeline-icon-frame: #efe8de;
     --purple: #8b5cf6;
     --purple-deep: #7c3aed;
     --marshmallow-pink: #ff80a1;
@@ -145,6 +150,14 @@ ol {
     --theme-soft: var(--stealth-blue-soft);
     --theme-soft-border: var(--stealth-blue-soft-border);
     --theme-ink: var(--stealth-blue-deep);
+}
+
+.theme-timeline {
+    --theme-accent: var(--timeline-teal);
+    --theme-accent-deep: var(--timeline-teal-deep);
+    --theme-soft: var(--timeline-teal-soft);
+    --theme-soft-border: var(--timeline-teal-soft-border);
+    --theme-ink: var(--timeline-teal-deep);
 }
 
 .theme-home {
@@ -273,12 +286,16 @@ ol {
         --enter-delay: 0.5s;
     }
 
-    .home-page .contact-panel {
+    .home-columns > .home-column:first-child > .app-card:nth-child(5) {
         --enter-delay: 0.56s;
     }
 
-    .home-page .site-footer__copyright {
+    .home-page .contact-panel {
         --enter-delay: 0.62s;
+    }
+
+    .home-page .site-footer__copyright {
+        --enter-delay: 0.68s;
     }
 
     .document-toolbar {
@@ -327,6 +344,10 @@ ol {
 
     .document-shell > .doc-section:nth-child(10) {
         --enter-delay: 0.59s;
+    }
+
+    .document-shell > .doc-section:nth-child(11) {
+        --enter-delay: 0.64s;
     }
 
     .doc-footer {
@@ -1728,6 +1749,10 @@ body.home-page {
     border-color: var(--stealth-blue);
 }
 
+.app-card--timeline:hover {
+    border-color: var(--timeline-teal);
+}
+
 .home-page .app-card__hero {
     display: flex;
     align-items: center;
@@ -1850,6 +1875,24 @@ body.home-page {
 
 .app-badge--stealth .app-badge__icon {
     padding: 4px;
+}
+
+.app-badge--timeline {
+    background: var(--timeline-icon-frame);
+}
+
+.home-page .app-badge--timeline,
+.document-header .app-badge--timeline {
+    box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.16),
+        0 4px 0 var(--line);
+}
+
+.app-badge--timeline .app-badge__icon {
+    width: 82%;
+    height: 82%;
+    border-radius: 0;
+    padding: 0;
 }
 
 .home-page .app-card__copy h3 {
@@ -2085,6 +2128,16 @@ body.home-page {
 .action-button--stealth:hover .action-button__icon {
     background: #ffffff;
     color: var(--stealth-blue);
+}
+
+.action-button--timeline:hover {
+    border-color: var(--timeline-teal);
+    background: var(--timeline-teal);
+}
+
+.action-button--timeline:hover .action-button__icon {
+    background: #ffffff;
+    color: var(--timeline-teal);
 }
 
 .home-page .site-footer {

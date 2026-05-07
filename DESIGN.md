@@ -49,6 +49,12 @@ colors:
   stealth-soft: "#e3ecf1"
   stealth-soft-border: "#9eb5c0"
   stealth-ink: "#233744"
+  timeline-accent: "#00708a"
+  timeline-accent-deep: "#101828"
+  timeline-soft: "#e0f7fb"
+  timeline-soft-border: "#93d9e8"
+  timeline-icon-frame: "#efe8de"
+  timeline-ink: "#101828"
   champions-accent: "#3ba8ff"
   amber: "#fbbf24"
   marshmallow-pink: "#ff80a1"
@@ -166,6 +172,9 @@ components:
   action-button-stealth-hover:
     backgroundColor: "{colors.stealth-accent}"
     textColor: "{colors.on-dark}"
+  action-button-timeline-hover:
+    backgroundColor: "{colors.timeline-accent}"
+    textColor: "{colors.on-dark}"
   language-switcher:
     backgroundColor: "{colors.surface}"
     textColor: "{colors.muted}"
@@ -209,6 +218,10 @@ components:
   theme-chip-stealth:
     backgroundColor: "{colors.stealth-soft}"
     textColor: "{colors.stealth-ink}"
+    rounded: "{rounded.md}"
+  theme-chip-timeline:
+    backgroundColor: "{colors.timeline-soft}"
+    textColor: "{colors.timeline-ink}"
     rounded: "{rounded.md}"
   contact-panel:
     backgroundColor: "{colors.surface-dark}"
