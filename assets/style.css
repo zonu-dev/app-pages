@@ -51,6 +51,9 @@
     --marshmallow-pink: #ff80a1;
     --amber: #fbbf24;
     --danger: #dc2626;
+    --hinoarashi-orange: #f8bd4b;
+    --arceus-indigo: #334155;
+    --arceus-gold: #f4d24a;
     --home-current: #38bdf8;
     --doc-current: #1e293b;
     --theme-accent: var(--cyan);
@@ -282,8 +285,16 @@ ol {
         --enter-delay: 0.44s;
     }
 
+    .home-columns > .home-column:nth-child(2) > .app-card:nth-child(3) {
+        --enter-delay: 0.5s;
+    }
+
     .home-columns > .home-column:first-child > .app-card:nth-child(4) {
         --enter-delay: 0.5s;
+    }
+
+    .home-columns > .home-column:nth-child(2) > .app-card:nth-child(4) {
+        --enter-delay: 0.56s;
     }
 
     .home-columns > .home-column:first-child > .app-card:nth-child(5) {
@@ -291,11 +302,11 @@ ol {
     }
 
     .home-page .contact-panel {
-        --enter-delay: 0.62s;
+        --enter-delay: 0.68s;
     }
 
     .home-page .site-footer__copyright {
-        --enter-delay: 0.68s;
+        --enter-delay: 0.74s;
     }
 
     .document-toolbar {
@@ -1753,6 +1764,14 @@ body.home-page {
     border-color: var(--timeline-teal);
 }
 
+.app-card--hinoarashi:hover {
+    border-color: var(--hinoarashi-orange);
+}
+
+.app-card--arceus:hover {
+    border-color: var(--arceus-gold);
+}
+
 .home-page .app-card__hero {
     display: flex;
     align-items: center;
@@ -1892,6 +1911,24 @@ body.home-page {
     width: 82%;
     height: 82%;
     border-radius: 0;
+    padding: 0;
+}
+
+.app-badge--hinoarashi {
+    background: var(--hinoarashi-orange);
+}
+
+.app-badge--arceus {
+    background: var(--arceus-gold);
+}
+
+.app-badge--hinoarashi .app-badge__icon {
+    padding: 0;
+}
+
+.app-badge--arceus .app-badge__icon {
+    width: 76%;
+    height: 76%;
     padding: 0;
 }
 
@@ -2138,6 +2175,34 @@ body.home-page {
 .action-button--timeline:hover .action-button__icon {
     background: #ffffff;
     color: var(--timeline-teal);
+}
+
+.action-button--hinoarashi:hover {
+    border-color: var(--hinoarashi-orange);
+    background: var(--hinoarashi-orange);
+}
+
+.action-button--hinoarashi:hover .action-button__label {
+    color: var(--text-strong);
+}
+
+.action-button--hinoarashi:hover .action-button__icon {
+    background: #ffffff;
+    color: var(--hinoarashi-orange);
+}
+
+.action-button--arceus:hover {
+    border-color: var(--arceus-gold);
+    background: var(--arceus-gold);
+}
+
+.action-button--arceus:hover .action-button__label {
+    color: var(--text-strong);
+}
+
+.action-button--arceus:hover .action-button__icon {
+    background: #ffffff;
+    color: var(--arceus-indigo);
 }
 
 .home-page .site-footer {

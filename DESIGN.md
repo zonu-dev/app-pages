@@ -56,6 +56,9 @@ colors:
   timeline-icon-frame: "#efe8de"
   timeline-ink: "#101828"
   champions-accent: "#3ba8ff"
+  hinoarashi-accent: "#f8bd4b"
+  arceus-accent: "#f4d24a"
+  arceus-accent-deep: "#334155"
   amber: "#fbbf24"
   marshmallow-pink: "#ff80a1"
   danger: "#dc2626"
@@ -175,6 +178,12 @@ components:
   action-button-timeline-hover:
     backgroundColor: "{colors.timeline-accent}"
     textColor: "{colors.on-dark}"
+  action-button-hinoarashi-hover:
+    backgroundColor: "{colors.hinoarashi-accent}"
+    textColor: "{colors.text-strong}"
+  action-button-arceus-hover:
+    backgroundColor: "{colors.arceus-accent}"
+    textColor: "{colors.text-strong}"
   language-switcher:
     backgroundColor: "{colors.surface}"
     textColor: "{colors.muted}"

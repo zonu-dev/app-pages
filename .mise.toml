@@ -7,7 +7,11 @@ run = "./scripts/build-pages.sh"
 description = "Build and serve local preview"
 alias = ["s"]
 depends = ["build"]
-run = "python3 -m http.server 4173 --directory .pages-dist"
+run = '''
+PORT="${PORT:-4173}"
+echo "[serve] Local preview: http://localhost:${PORT}/"
+exec python3 -m http.server "${PORT}" --directory .pages-dist
+'''
 
 [tasks.open]
 description = "Open local preview"
