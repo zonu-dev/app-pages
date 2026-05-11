@@ -51,6 +51,8 @@
     --marshmallow-pink: #ff80a1;
     --amber: #fbbf24;
     --danger: #dc2626;
+    --pokemon-calendar-red: #ef4444;
+    --pokemon-calendar-frame: linear-gradient(135deg, var(--stealth-blue), var(--stealth-blue-deep));
     --hinoarashi-orange: #f8bd4b;
     --arceus-indigo: #334155;
     --arceus-gold: #f4d24a;
@@ -301,12 +303,16 @@ ol {
         --enter-delay: 0.56s;
     }
 
+    .home-columns > .home-column:first-child > .app-card:nth-child(6) {
+        --enter-delay: 0.62s;
+    }
+
     .home-page .contact-panel {
-        --enter-delay: 0.68s;
+        --enter-delay: 0.74s;
     }
 
     .home-page .site-footer__copyright {
-        --enter-delay: 0.74s;
+        --enter-delay: 0.8s;
     }
 
     .document-toolbar {
@@ -1756,6 +1762,10 @@ body.home-page {
     border-color: #3ba8ff;
 }
 
+.app-card--pokemon-calendar:hover {
+    border-color: var(--pokemon-calendar-red);
+}
+
 .app-card--stealth:hover {
     border-color: var(--stealth-blue);
 }
@@ -1888,6 +1898,17 @@ body.home-page {
     padding: 6px;
 }
 
+.app-badge--pokemon-calendar {
+    background: var(--pokemon-calendar-frame);
+}
+
+.app-badge--pokemon-calendar .app-badge__icon {
+    width: 76%;
+    height: 76%;
+    border-radius: 0;
+    padding: 0;
+}
+
 .app-badge--stealth {
     background: linear-gradient(135deg, var(--stealth-blue), var(--stealth-blue-deep));
 }
@@ -1946,6 +1967,21 @@ body.home-page {
     font-size: 0.94rem;
     font-weight: 800;
     line-height: 1.45;
+}
+
+.home-page .app-card--pokemon-calendar .app-card__copy h3,
+.home-page .app-card--pokemon-calendar .app-card__copy p {
+    white-space: nowrap;
+}
+
+.home-page .app-card--pokemon-calendar .app-card__copy h3 {
+    font-size: 1.12rem;
+    line-height: 1.1;
+}
+
+.home-page .app-card--pokemon-calendar .app-card__copy p {
+    font-size: 0.64rem;
+    line-height: 1.35;
 }
 
 .app-card__actions {
@@ -2155,6 +2191,16 @@ body.home-page {
 .action-button--champions:hover .action-button__icon {
     background: #ffffff;
     color: #3ba8ff;
+}
+
+.action-button--pokemon-calendar:hover {
+    border-color: var(--pokemon-calendar-red);
+    background: var(--pokemon-calendar-red);
+}
+
+.action-button--pokemon-calendar:hover .action-button__icon {
+    background: #ffffff;
+    color: var(--pokemon-calendar-red);
 }
 
 .action-button--stealth:hover {

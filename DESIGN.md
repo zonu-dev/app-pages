@@ -56,6 +56,8 @@ colors:
   timeline-icon-frame: "#efe8de"
   timeline-ink: "#101828"
   champions-accent: "#3ba8ff"
+  pokemon-calendar-accent: "#ef4444"
+  pokemon-calendar-icon-frame: "linear-gradient(135deg, #3b6270, #233744)"
   hinoarashi-accent: "#f8bd4b"
   arceus-accent: "#f4d24a"
   arceus-accent-deep: "#334155"
@@ -177,6 +179,9 @@ components:
     textColor: "{colors.on-dark}"
   action-button-timeline-hover:
     backgroundColor: "{colors.timeline-accent}"
+    textColor: "{colors.on-dark}"
+  action-button-pokemon-calendar-hover:
+    backgroundColor: "{colors.pokemon-calendar-accent}"
     textColor: "{colors.on-dark}"
   action-button-hinoarashi-hover:
     backgroundColor: "{colors.hinoarashi-accent}"
