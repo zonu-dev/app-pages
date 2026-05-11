@@ -2433,6 +2433,29 @@ select:focus-visible {
         gap: 28px;
     }
 
+    .home-page .page-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .home-page .hero-title {
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+
+    .page-header__controls {
+        width: auto;
+        flex: none;
+        margin-left: auto;
+    }
+
+    .home-page .language-switcher {
+        width: auto;
+        flex: none;
+    }
+
     .language-select {
         font-size: 0.94rem;
     }
