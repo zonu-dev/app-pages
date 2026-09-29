@@ -1960,6 +1960,7 @@ body.home-page {
 
 .home-page .app-card__copy {
     gap: 7px;
+    flex: 1 1 auto;
 }
 
 .home-page .app-card__copy p {
@@ -1969,19 +1970,13 @@ body.home-page {
     line-height: 1.45;
 }
 
-.home-page .app-card--pokemon-calendar .app-card__copy h3,
-.home-page .app-card--pokemon-calendar .app-card__copy p {
-    white-space: nowrap;
-}
-
 .home-page .app-card--pokemon-calendar .app-card__copy h3 {
-    font-size: 1.12rem;
-    line-height: 1.1;
+    font-size: clamp(1.26rem, 1.8vw, 1.36rem);
+    line-height: 1.15;
 }
 
 .home-page .app-card--pokemon-calendar .app-card__copy p {
-    font-size: 0.64rem;
-    line-height: 1.35;
+    font-size: clamp(0.82rem, 1.1vw, 0.86rem);
 }
 
 .app-card__actions {

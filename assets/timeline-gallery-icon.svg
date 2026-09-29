@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Timeline Gallery</title>
+  <desc id="desc">A stylized image gallery grid for the Timeline Gallery Chrome extension.</desc>
+  <defs>
+    <linearGradient id="bg" x1="18" y1="8" x2="112" y2="124" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#0f4c5c"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="26" y1="24" x2="104" y2="103" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d9fbf5"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="url(#bg)"/>
+  <rect x="24" y="24" width="80" height="80" rx="16" fill="url(#panel)" stroke="#073b44" stroke-width="6"/>
+  <path d="M43 47h42M43 64h42M43 81h42" fill="none" stroke="#0f4c5c" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="38" cy="47" r="5" fill="#0f9f9a"/>
+  <circle cx="38" cy="64" r="5" fill="#0f9f9a"/>
+  <circle cx="38" cy="81" r="5" fill="#0f9f9a"/>
+  <path d="M78 88 92 69l10 13v22H61l11-15c2-3 4-3 6-1Z" fill="#2dd4bf"/>
+  <circle cx="91" cy="49" r="7" fill="#fbbf24"/>
+</svg>
